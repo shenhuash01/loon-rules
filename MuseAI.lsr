@@ -1,6 +1,11 @@
 # > Muse AI
+# Muse App / 网页版分流规则
 DOMAIN-SUFFIX,muse.ai
-DOMAIN,production.museai.com
+DOMAIN-SUFFIX,museai.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
+DOMAIN-SUFFIX,multimango.com
+DOMAIN,auth.meta.com
 DOMAIN,connect.facebook.net
 DOMAIN,meta-ohttp-config-prod.fastly-edge.com
 DOMAIN,meta-ohttp-relay-prod.fastly-edge.com
