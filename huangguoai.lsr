@@ -1,8 +1,18 @@
-# 黄果短剧 huangguoai.com 分流规则
-# 主站 + 镜像站 + 视频/图片 CDN，直连不通，走代理
+# 短剧分流规则：黄果系 + 2048ai(麻豆AI)
+# 主站与视频 CDN 直连不通，走代理
+# 注意：放在 Loon 里 cn 直连规则的上方，否则 .cn 的 CDN 会被抢先直连
+# 订阅地址：https://raw.githubusercontent.com/shenhuash01/loon-rules/main/huangguoai.lsr
+
+# --- 黄果短剧 ---
 DOMAIN-SUFFIX,huangguoai.com,PROXY
+DOMAIN-SUFFIX,huangguo.video,PROXY
 DOMAIN-SUFFIX,huangguo8.com,PROXY
 DOMAIN-SUFFIX,huangguoai.pages.dev,PROXY
+# 黄果视频/图片 CDN（tp*.wirqed.cn、yd-hls.tktjpm.cn 等）
 DOMAIN-SUFFIX,wirqed.cn,PROXY
 DOMAIN-SUFFIX,tktjpm.cn,PROXY
 DOMAIN-SUFFIX,ediayikma.cc,PROXY
+
+# --- 2048ai / 麻豆AI ---
+DOMAIN-SUFFIX,2048ai.vip,PROXY
+DOMAIN-SUFFIX,madouai.xyz,PROXY
