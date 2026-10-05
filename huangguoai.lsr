@@ -1,0 +1,5 @@
+# 黄果短剧 huangguoai.com 分流规则
+# 主站 + 视频/图片 CDN，直连不通，走代理
+DOMAIN-SUFFIX,huangguoai.com,PROXY
+DOMAIN-SUFFIX,wirqed.cn,PROXY
+DOMAIN-SUFFIX,ediayikma.cc,PROXY
