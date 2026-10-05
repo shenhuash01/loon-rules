@@ -1,0 +1,17 @@
+#!name=短剧去广告
+#!desc=黄果 huangguo.video / huangguoai.com、2048ai.vip 短剧网站去广告
+#!author=shenhuash01
+#!homepage=https://github.com/shenhuash01/loon-rules
+
+[Rewrite]
+# 黄果 huangguo.video
+response if ${url} ~= /^https:\/\/huangguo\.video/i && ${response.header['content-type']} ~= /html/i then response.body.replace(/(?i)<\/head>/, "<style>div.hg-exo-slot,div.hg-exo-slot-list,.hg-tile-slot-list{display:none!important}</style></head>")
+
+# 黄果 huangguoai.com
+response if ${url} ~= /^https:\/\/huangguoai\.com/i && ${response.header['content-type']} ~= /html/i then response.body.replace(/(?i)<\/head>/, "<style>.hg-hero,.hg-ssp-slot,.hg-ssp-pause{display:none!important}</style></head>")
+
+# 2048ai.vip
+request if ${url} ~= /^https:\/\/2048ai\.vip\/api\/v1\/(?:ads|ai-selection\/config\?productId=1&device=h5)/i then reject_dict(200)
+
+[MitM]
+hostname = huangguo.video, huangguoai.com, 2048ai.vip
