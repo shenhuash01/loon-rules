@@ -1,0 +1,12 @@
+#!name=红果短剧去广告(通用版)
+#!desc=屏蔽穿山甲/巨量引擎广告域名，可去开屏及部分信息流广告；看广告解锁剧集的激励广告为服务端校验，无法去除
+#!author=shenhuash01
+#!homepage=https://github.com/shenhuash01/loon-rules
+
+[Rule]
+# 穿山甲 Pangle（字节系广告 SDK，红果开屏/信息流广告主要来源）
+DOMAIN-SUFFIX,pangle.cn,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+# 巨量引擎
+DOMAIN-SUFFIX,ad.oceanengine.com,REJECT
+DOMAIN-SUFFIX,oceanengine.com,REJECT
