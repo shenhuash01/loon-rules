@@ -1,12 +1,31 @@
 #!name=红果短剧去广告(通用版)
-#!desc=屏蔽穿山甲/巨量引擎广告域名，可去开屏及部分信息流广告；看广告解锁剧集的激励广告为服务端校验，无法去除
+#!desc=屏蔽穿山甲/巨量引擎/广点通等广告SDK域名，可去开屏及部分信息流广告；看广告解锁剧集的激励广告为服务端校验，无法去除
 #!author=shenhuash01
 #!homepage=https://github.com/shenhuash01/loon-rules
 
 [Rule]
 # 穿山甲 Pangle（字节系广告 SDK，红果开屏/信息流广告主要来源）
 DOMAIN-SUFFIX,pangle.cn,REJECT
+DOMAIN-SUFFIX,pangle.io,REJECT
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com,REJECT
+DOMAIN-SUFFIX,isnssdk.com,REJECT
 # 巨量引擎
 DOMAIN-SUFFIX,ad.oceanengine.com,REJECT
 DOMAIN-SUFFIX,oceanengine.com,REJECT
+# 字节其他广告相关
+DOMAIN-SUFFIX,bytegecko.com,REJECT
+DOMAIN-SUFFIX,volcengineapi.com,REJECT
+# 腾讯广点通
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,mi.gdt.qq.com,REJECT
+DOMAIN-SUFFIX,ads.tencent.com,REJECT
+DOMAIN-SUFFIX,e.qq.com,REJECT
+# 百度广告
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,pos.baidu.com,REJECT
+DOMAIN-SUFFIX,duapps.com,REJECT
+# 快手广告
+DOMAIN-SUFFIX,ad.kuaishou.com,REJECT
+# 其他常见广告联盟
+DOMAIN-SUFFIX,uniondrug.com,REJECT
