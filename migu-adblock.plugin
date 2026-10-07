@@ -1,0 +1,26 @@
+#!name=咪咕视频去广告
+#!desc=拦截开屏广告及信息流广告
+#!author=Tony哥
+#!icon=https://raw.githubusercontent.com/shenhuash01/loon-rules/main/icon/migu.png
+
+[Rule]
+# 穿山甲广告 SDK
+DOMAIN-KEYWORD,pangle,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
+# 巨量引擎
+DOMAIN-KEYWORD,ad.oceanengine,REJECT
+DOMAIN-KEYWORD,oceanengine,REJECT
+# 优量汇/腾讯广告
+DOMAIN-KEYWORD,gdt.qq,REJECT
+# 百度广告
+DOMAIN-KEYWORD,baidu.com##ad,REJECT
+# 快手广告
+DOMAIN-KEYWORD,kuaishou.com##ad,REJECT
+
+[Rewrite]
+# 拦截常见开屏广告接口
+^https?://.*\.miguvideo\.com/.*ad.* - reject-200
+^https?://.*ad.*\.migu\.cn/.* - reject-200
+
+[MitM]
+hostname = *.miguvideo.com, *.migu.cn, pangle.cn, *.pangolin-sdk-toutiao.com
