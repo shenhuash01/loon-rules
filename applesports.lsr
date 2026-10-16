@@ -1,0 +1,5 @@
+# > Apple Sports
+# Apple Sports App 分流规则（iPhone 地区需设为美国等支持地区才可用）
+# sports-api.apple.com 为抓包社区公认的后端域名，KEYWORD 行兜底其它 sports 相关域名
+DOMAIN-SUFFIX,sports-api.apple.com
+DOMAIN-KEYWORD,sports
