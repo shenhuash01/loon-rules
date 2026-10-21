@@ -1,0 +1,10 @@
+#!name=龙湖天街签到
+#!desc=龙湖天街 App 自动签到：拦截签到签名接口请求头，执行签到脚本（由 QX 规则转换）
+#!author=shenhuash01
+#!homepage=https://github.com/shenhuash01/loon-rules
+
+[Rewrite]
+^https?:\/\/gw2c\-hw\-open\.longfor\.com\/lmarketing\-task\-api\-mvc\-prod\/openapi\/task\/v1\/signature\/clock url script-request-header https://raw.githubusercontent.com/leiyiyan/resource/main/script/lhtj/lhtj.js
+
+[MitM]
+hostname = gw2c-hw-open.longfor.com
