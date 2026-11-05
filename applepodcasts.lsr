@@ -18,3 +18,6 @@ DOMAIN,podcasts.itunes.apple.com,PROXY
 DOMAIN,search.itunes.apple.com,PROXY
 DOMAIN,lookup-api.apple.com,PROXY
 DOMAIN,xp.apple.com,PROXY
+
+# ===== 节目音频托管 (能访问不能播放时, 按 Loon 最近请求逐个补) =====
+DOMAIN-SUFFIX,acast.com,PROXY
