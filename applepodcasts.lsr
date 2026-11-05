@@ -1,0 +1,20 @@
+# Apple Podcasts (iOS 播客) — Loon 分流规则
+# 用途: 外区 Apple 账户在中国大陆 IP 下浏览/搜索/订阅播客时, 把播客的目录与账户接口走代理
+# 说明: 单集音频大多在各节目自己的 RSS 托管商服务器上, 不在苹果域名内, 无法用域名清单枚举;
+#       本表只覆盖苹果侧的目录/API/订阅校验接口。封面走 mzstatic, 大陆可直连, 不必走代理。
+# 放置: 须置于 itunes.apple.com / *.apple.com 的宽泛直连规则上方, 否则会被抢先直连。
+
+# ===== 核心 (目录 + 资料库同步, 缺一不可) =====
+DOMAIN-SUFFIX,podcasts.apple.com,PROXY
+DOMAIN-SUFFIX,podcast.apple.com,PROXY
+DOMAIN,bag.itunes.apple.com,PROXY
+DOMAIN,bookkeeper.itunes.apple.com,PROXY
+
+# ===== 扩展 (订阅校验 / 播放 / 搜索, 浏览或订阅付费节目异常时再启用) =====
+DOMAIN,fpinit.itunes.apple.com,PROXY
+DOMAIN,entitlements-edge.itunes.apple.com,PROXY
+DOMAIN,play.itunes.apple.com,PROXY
+DOMAIN,podcasts.itunes.apple.com,PROXY
+DOMAIN,search.itunes.apple.com,PROXY
+DOMAIN,lookup-api.apple.com,PROXY
+DOMAIN,xp.apple.com,PROXY
